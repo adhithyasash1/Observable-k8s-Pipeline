@@ -22,7 +22,7 @@ scale a basic iris classification api to handle concurrent load using kubernetes
 ## 🧱 project structure
 
 ```
-adhithyasash1-observable-k8s-pipeline/
+observable-k8s-pipeline/
 ├── app/                   → fastapi app + model
 │   ├── main.py
 │   └── model.joblib
