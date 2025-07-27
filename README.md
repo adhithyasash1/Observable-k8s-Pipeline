@@ -1,4 +1,4 @@
-# 🌸 observable & scalable iris classifier api (MLOps-Week-7)
+# 🌸 observable & scalable iris classifier api
 
 [![build](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/adhithyasash1/observable-k8s-pipeline/actions)
 [![deployment](https://img.shields.io/badge/deployment-live-blue)](http://34.55.215.228)
