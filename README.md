@@ -125,7 +125,6 @@ curl -X POST http://<external-ip>/predict \
 
 ## 👤 author
 
-R Sashi Adhithya
-adhithyasash1 
-21F3000611
+R Sashi Adhithya /
+(21F3000611) /
 github: [@adhithyasash1](https://github.com/adhithyasash1)
