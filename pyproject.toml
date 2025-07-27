@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "iris-observable-api"
+version = "0.1.0"
+description = "An observable and scalable Iris classifier API."
+authors = ["adhithyasash1 <sashiradhithya@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = ">=0.111.0"
+uvicorn = {extras = ["standard"], version = ">=0.29.0"}
+scikit-learn = ">=1.4.0"
+pandas = ">=2.2.0"
+joblib = ">=1.4.0"
+opentelemetry-api = ">=1.24.0"
+opentelemetry-sdk = ">=1.24.0"
+opentelemetry-exporter-gcp-trace = "^1.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

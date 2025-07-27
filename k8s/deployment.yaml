@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iris-observable-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: iris-observable-api
+  template:
+    metadata:
+      labels:
+        app: iris-observable-api
+    spec:
+      # Use the Service Account we configured for Workload Identity
+      serviceAccountName: telemetry-access
+      containers:
+      - name: app-container
+        image: us-central1-docker.pkg.dev/true-sprite-459511-f5/my-repo/iris-observable-api:latest # Placeholder
+        ports:
+        - containerPort: 8000
+        readinessProbe:
+          httpGet:
+            path: /ready_check
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /live_check
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 10
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
